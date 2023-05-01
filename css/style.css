@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root{
+    --purple: #6f3bff;
+    --purple-soft: #b499ff;
+    --aqua: #3ffcd9;
+    --aqua-hover: #00dfb6;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +18,7 @@
 
 body{
     background-color: #eeeeee;
-    background-image: url(../bg.png);
+    background-image: url(../assets/bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,11 +44,11 @@ body{
 }
 
 .title-box h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .subtitle-box{
-    background-color: #bca4ff;
+    background-color: var(--purple-soft);
     padding: .5rem .8rem;
     border-radius: 5px;
     letter-spacing: 2px;
@@ -52,19 +60,25 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    transition: .2s ease;
 }
 
+.subtitle-box:hover{
+    font-weight: 500;
+    box-shadow: 10px 10px 0 black;
+}
 .subtitle-box h5{
     font-weight: 500;
 }
 
 form{
-    background-color: #b499ff;
+    background-color: var(--purple-soft);
     outline: 1px solid black;
     box-shadow: 5px 5px 0 black;
     padding: 2rem;
     border-radius: 5px;
-    width: 20%;
+    width: 300px;
+    height: 350px;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -88,6 +102,7 @@ form{
 
 input,
 button{
+    background-color: #f3eeff;
     padding: .8rem;
     outline: 1px solid rgb(197, 197, 197);
     border-radius: 5px;
@@ -95,20 +110,29 @@ button{
 }
 
 input[type='submit']{
-    background-color: #05F1C7;
+    background-color: var(--aqua);
     outline: 1px solid black;
     box-shadow: 5px 5px 0 black;
     cursor: pointer;
 }
 
 input[type='submit']:hover{
-    background-color: #4bffde;
+    background-color: var(--aqua-hover);
+    box-shadow: 10px 10px 0 black;
+
+    font-weight: 700;
 }
 
 input:focus{
-    outline: 2px solid #6f3bff;
+    outline: 2px solid var(--purple);
+    color:  var(--purple);
 }
 
-input:focus{
-    color:  #6f3bff;
+input[type="submit"]:focus{
+    outline: 1px solid black;
+    color: black;
+}
+
+.ph{
+    cursor: pointer;
 }

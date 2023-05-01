@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="js/mascaras.js"></script>
+
+    <script src="js/mascaras-dynamic.js"></script>
+    <script src="js/mascaras-static.js"></script>
     <script src="js/validacoes.js"></script>
 
     <title>RegEx</title>
@@ -26,20 +28,20 @@
             <h1>Faça seu cadastro <br> agora mesmo!</h1>
         </div>
 
-        <form>
+        <form actio="#">
             <div class="input-field">
-                <i class="ph ph-user"></i>
-                <input type="text" id="in_cpf_cnpj" placeholder="CPF/CNPJ:">
+                <i class="ph ph-user"></i> 
+                <input type="text" maxlength="18" onkeyup="return maskCPF_CNPJ(event)" placeholder="CPF/CNPJ:">
             </div>
 
             <div class="input-field">
                 <i class="ph ph-phone"></i>
-                <input type="text" id="in_phone" placeholder="(XX) XXXXX-XXXX:">
+                <input type="text" maxlength="15" onkeyup="maskPhone(event)" placeholder="Telefone:">
             </div>
 
             <div class="input-field">
                 <i class="ph ph-house"></i>
-                <input type="text" id="in_cep" placeholder="CEP:">
+                <input type="text" maxlength="9" onkeyup="maskCEP(event)" placeholder="CEP:">
             </div>
 
             <div class="input-field">
@@ -48,11 +50,11 @@
             </div>
 
             <div class="input-field">
-                <i class="ph ph-eye"></i>
-                <input type="text" id="in_senha" placeholder="Senha:">
+                <i class="ph ph-eye" onclick="toggleVisibilidadeSenha()"></i>
+                <input type="password" id="in_senha" placeholder="Senha:">
             </div>
 
-            <input type="submit" value="CADASTRAR">
+            <input type="submit" value="CADASTRAR" onclick="cadastrar()">
         </form>
         
     </div>
