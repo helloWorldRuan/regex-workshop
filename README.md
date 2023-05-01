@@ -1,2 +1,2 @@
 # 👨‍💻RegEx Workshop
-Workshop sobre expressões regulares e como essa ferramenta pode ser poderosa para validar, formatar e extrair informações de strings.
+Workshop sobre expressões regulares, demonstrando como essa ferramenta pode ser útil e poderosa para validar, formatar e extrair informações de strings.
