@@ -10,8 +10,7 @@
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script src="js/mascaras-dynamic.js"></script>
-    <script src="js/mascaras-static.js"></script>
+    <script src="js/mascaras.js"></script>
     <script src="js/validacoes.js"></script>
 
     <title>RegEx</title>
@@ -31,17 +30,17 @@
         <form actio="#">
             <div class="input-field">
                 <i class="ph ph-user"></i> 
-                <input type="text" maxlength="18" onkeyup="return maskCPF_CNPJ(event)" placeholder="CPF/CNPJ:">
+                <input type="text" id="in_cpf_cnpj" maxlength="18" onkeyup="maskCPF_CNPJ()" placeholder="CPF/CNPJ:">
             </div>
 
             <div class="input-field">
                 <i class="ph ph-phone"></i>
-                <input type="text" maxlength="15" onkeyup="maskPhone(event)" placeholder="Telefone:">
+                <input type="text" id="in_phone" maxlength="15" onkeyup="maskPhone()" placeholder="Telefone:">
             </div>
 
             <div class="input-field">
                 <i class="ph ph-house"></i>
-                <input type="text" maxlength="9" onkeyup="maskCEP(event)" placeholder="CEP:">
+                <input type="text" id="in_cep" maxlength="9" onkeyup="maskCEP()" placeholder="CEP:">
             </div>
 
             <div class="input-field">

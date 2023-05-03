@@ -1,6 +1,6 @@
 function validarEmail() {
     const email = in_email.value.trim()
-    const validEmail = /^(\w{2,})+([._]?\w+)*@(\w{3,})+([.-])[\w]{2,}$/.test(email)
+    const validEmail = /^(\w{2,})([._]?\w+)*@(\w{3,})([._]\w{2,})?([.-])[\w]{2,}$/.test(email)
 
     if (validEmail) {
         alert("✅ Email válido")
